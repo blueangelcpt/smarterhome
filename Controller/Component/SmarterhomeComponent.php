@@ -23,6 +23,7 @@ class SmarterhomeComponent extends Component {
 			'invoiceNo' => $transactionId,
 			'amount' => $amount
 		);
+		$this->log('Smarterhomes API request: ' . $payload, $this->tag);
 		$result = $this->socket->post($this->settings['url'] . '/api/v1/prepaid/credit', $payload);
 		$this->log('Smarterhomes API response (N$' . $amount . ' for ' . $meterNumber . '): ' . $result, $this->tag);
 		return json_decode($result->body, true);
