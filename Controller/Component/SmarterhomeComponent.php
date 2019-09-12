@@ -50,6 +50,6 @@ class SmarterhomeComponent extends Component {
 		$this->log('Smarterhomes validation request: ' . $this->socket->request['raw'], $this->tag);
 		$this->log('Smarterhomes validation response (' . $meterNumber . '): ' . $result, $this->tag);
 		$response = json_decode($result->body, true);
-		return (!$response['error']);
+		return ($response['data']['error'] == 0) ? true : false;
 	}
 }
