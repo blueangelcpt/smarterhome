@@ -23,7 +23,7 @@ class SmarterhomeComponent extends Component {
 		$request = array(
 			'header' => array(
 				'Content-Type' => 'application/x-www-form-urlencoded',
-				'Connection' => 'keep-alive',
+				'Connection' => 'close',
 				'Cache-Control' => 'no-cache'
 			)
 		);
@@ -43,7 +43,7 @@ class SmarterhomeComponent extends Component {
 		$request = array(
 			'header' => array(
 				'Content-Type' => 'application/x-www-form-urlencoded',
-				'Connection' => 'keep-alive',
+				'Connection' => 'close',
 				'Cache-Control' => 'no-cache'
 			)
 		);
